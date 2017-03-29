@@ -1,4 +1,5 @@
 package com.sawant;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -18,12 +19,11 @@ public class SumOfProducts {
 		for (Integer i = 0; i < n; i++) {
 			fifo.add(i);
 			sum = sum.add(products(fifo));
-			//System.out.println(i+"------"+sum);
+			// System.out.println(i+"------"+sum);
 		}
-		if(sum.toString().length()>10)
-		{
-			System.out.println(sum.toString().substring(0,10));
-		}else{
+		if (sum.toString().length() > 10) {
+			System.out.println(sum.toString().substring(0, 10));
+		} else {
 			System.out.println(sum);
 		}
 	}
@@ -34,12 +34,12 @@ public class SumOfProducts {
 			return BigInteger.valueOf(0);
 		} else {
 			for (Integer i : fifo) {
-				if(i!=0){
-					product =  product.multiply(BigInteger.valueOf(i));
+				if (i != 0) {
+					product = product.multiply(BigInteger.valueOf(i));
 				}
 			}
 		}
-		System.out.println(fifo+" === "+product);
+		// System.out.println(fifo + " === " + product);
 		return product;
 	}
 }
