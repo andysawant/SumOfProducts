@@ -19,7 +19,6 @@ public class SumOfProducts {
 		for (Integer i = 0; i < n; i++) {
 			fifo.add(i);
 			sum = sum.add(products(fifo));
-			// System.out.println(i+"------"+sum);
 		}
 		if (sum.toString().length() > 10) {
 			System.out.println(sum.toString().substring(0, 10));
