@@ -1,6 +1,7 @@
 package com.sawant;
 
 import java.math.BigInteger;
+import java.util.Date;
 import java.util.Scanner;
 
 import com.google.common.collect.EvictingQueue;
@@ -15,11 +16,13 @@ public class SumOfProducts {
 		Integer n = scanner.nextInt();
 		System.out.print("c = ");
 		Integer c = scanner.nextInt();
+		//System.out.println(new Date());
 		EvictingQueue<Integer> fifo = EvictingQueue.create(c);
 		for (Integer i = 0; i < n; i++) {
 			fifo.add(i);
 			sum = sum.add(products(fifo));
 		}
+		//System.out.println(new Date());
 		if (sum.toString().length() > 10) {
 			System.out.println(sum.toString().substring(0, 10));
 		} else {
